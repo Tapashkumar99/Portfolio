@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c33b622f2a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- -----------------------Preloader------------------------- -->
+    <div id="preloader"></div>
+
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="asset/logo4.jpg" class="logo" />
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <!-- <li><a href="#services">Services</a></li> -->
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>FullStack Developer</p>
+          <h1>Hi, I'm <span>Tapash</span> <br />From Jamshedpur</h1>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------------about--------------------- -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1"><img src="asset/pic2.jpg" id="photo" /></div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>
+              A highly motivated and hardworking individual looking for a
+              responsible role in a reputable organization. Quality conscious
+              and enthusiastic in learning new things with target-oriented
+              approach following timelines
+            </p>
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Frontend</span><br />Developer with ReactJS</li>
+                <li><span>MERN Stack</span><br />Developer</li>
+                <li><span>Database</span><br />with MongoDB and MySQL</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2021</span><br />BCA from Bhabha Engineering Research
+                  Institute, Bhopal
+                </li>
+                <li>
+                  <span>2017</span><br />Intermediate from SDSM School for
+                  Excellence, Jamshedpur
+                </li>
+                <li>
+                  <span>2015</span><br />Mariculation from AIWC Academy of
+                  Excellence, Jamshedpur
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2022 - Current</span><br />Full Stack Developer
+                  Internship at Almabetter
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -----------------------------services------------------------- -->
+
+    <!-- <div id="services">
+      <div class="container">
+        <h1 class="sub-title">Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-brands fa-react"></i>
+            <h2>Frontend Development</h2>
+            <p>
+              Frontend developer with React JS with Bootstrap,Tailwind CSS,React
+              Hook,React-Redux and Redux-toolkit.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Full Stack Developer</h2>
+            <p>
+              Full Stack development with MERN Stack with Hands on experience on
+              ReactJS.
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-link"></i>
+            <h2>WEB 3.0</h2>
+            <p>Web 3.0 with Solidity ,React dApp, Metamask</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- -----------------------Portfolio------------------------ -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="asset/images/work-1.jpg" alt="" />
+            <div class="layer">
+              <h3>FlashCard Generator</h3>
+              <p>
+                Create flash cards on the go with this amazing, free,
+                easy-to-use flash card maker app. Perfect for students of any
+                age. Create a new flashcard.
+              </p>
+              <a href="https://tapashkumar99.github.io/FlashCard1/"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="asset/images/work-2.jpg" alt="" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                The app connect you to online stores around the world. Let's
+                shop online.
+              </p>
+              <a href="https://joyful-granita-29f35c.netlify.app/"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="asset/images/work-3.png" alt="" />
+            <div class="layer">
+              <h3>Online Shopping App</h3>
+              <p>
+                This is a blogging application.This site helps you to decide best destination in India.
+              </p>
+              <a href="https://github.com/Tapashkumar99/blog-frontend"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/Tapashkumar99" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- -----------------------------------Contact Info----------------------------------- -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <div class="sub-title">Contact Me</div>
+            <p><i class="fa-solid fa-envelope"></i> tapashkumar118@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i> 8825208727</p>
+            <div class="social-icons">
+              <a href="https://www.instagram.com/tapaskumar929/"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="https://wa.me/918825208727/?text=I'm%20interested%20in%20your%20portfolio"><i class="fa-brands fa-whatsapp"></i></a>
+              <a
+                href="https://www.linkedin.com/in/tapash-kumar-mahato-875148238"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+              <a href="https://github.com/Tapashkumar99"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </div>
+            <a href="asset/TAPASH KUMAR MAHATO.pdf" download class="btn btn2"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="Email"
+                placeholder="example@email.com"
+                required
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          Copyright © Tapash. Made with <i class="fa-solid fa-heart"></i> by
+          Tapash
+        </p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
