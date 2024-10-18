@@ -28,7 +28,7 @@ function closemenu() {
 // ------------------------ For Contact Form Details ------------------------
 
 const scriptURL =
-  "https://script.google.com/macros/s/AKfycbw6IyTAme39AV5NTj71NZwXRc7qyhYLYaPRy6zNs9BLCHUlOND1FDVf33RjozU0QWF73g/exec";
+  "https://api.sheetbest.com/sheets/673fb0e0-0859-41d7-8647-0de4feb5aec6";
 const form = document.forms["submit-to-google-sheet"];
 const msg = document.getElementById("msg")
 
