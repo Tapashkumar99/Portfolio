@@ -4,251 +4,793 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
+    <meta name="description" content="Tapash Kumar Mahato - Full-Stack Developer, App Developer, UI/UX Designer, and AI Automation Specialist" />
+    <title>Tapash Kumar Mahato | Full-Stack Developer & Digital Creator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <script
       src="https://kit.fontawesome.com/c33b622f2a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <!-- -----------------------Preloader------------------------- -->
-    <div id="preloader"></div>
-
-    <div id="header">
-      <div class="container">
-        <nav>
-          <img src="asset/logo4.jpg" class="logo" />
-          <ul id="sidemenu">
-            <li><a href="#header">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#portfolio">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-          </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-          <p>FullStack Developer</p>
-          <h1>Hi, I'm <span>Tapash</span> <br />Passionate Developer</h1>
-        </div>
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="preloader-content">
+        <div class="loader"></div>
+        <p class="loader-text">Loading...</p>
       </div>
     </div>
-    <!-- ---------------------------------about--------------------- -->
-    <div id="about">
+
+    <!-- Animated Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header / Navigation -->
+    <header id="header" class="sticky-nav">
+      <nav class="container">
+        <div class="nav-wrapper">
+          <div class="logo-wrapper">
+            <a href="#hero" class="logo-link">
+              <img src="asset/logo_wobg.png" alt="Tapash Kumar Logo" class="logo" />
+            </a>
+          </div>
+          <ul id="sidemenu" class="nav-menu">
+            <!-- <li><a href="#header" class="nav-link">Home</a></li> -->
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#services" class="nav-link">What I Do</a></li>
+            <li><a href="#portfolio" class="nav-link">Projects</a></li>
+            <li><a href="#tech-stack" class="nav-link">Tech Stack</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+            <i class="fa-solid fa-xmark close-menu" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars hamburger" onclick="openmenu()"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="hero-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <p class="hero-subtitle">Welcome, I'm</p>
+          <h1 class="hero-title">
+            <span class="name-highlight">Tapash Kumar Mahato</span>
+          </h1>
+          <div class="dynamic-text-wrapper">
+            <span class="static-text">I'm a </span>
+            <span class="dynamic-text" id="dynamic-text">
+              <span class="text-item active">Full-Stack Developer</span>
+              <span class="text-item">App Developer</span>
+              <span class="text-item">UI/UX Designer</span>
+              <span class="text-item">AI Automation</span>
+            </span>
+          </div>
+          <p class="hero-description">
+            Building scalable web & mobile applications, crafting beautiful
+            designs, and creating engaging digital content.
+          </p>
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="floating-card">
+            <div class="card-glow"></div>
+            <img src="asset/hero1.jpg" alt="Tapash Kumar" class="hero-image" />
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="mouse"></div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
       <div class="container">
-        <div class="row">
-          <!-- <div class="about-col-1"><img src="asset/pic6.jpg" id="photo" /></div> -->
-          <div class="about-col-2">
-            <h1 class="sub-title">About Me</h1>
-            <p>
-              I’m a full-stack developer and digital creator with experience in
-              web design, app development, and graphic design. I’ve worked with
-              brands like The Chartistt and Investist, delivering high-quality
-              solutions using MERN stack, AWS,React Native, and more. Let’s
-              create something great together!
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-description">
+              I'm a full-stack developer and multi-disciplinary digital creator
+              specializing in high-performance web apps, mobile apps, UI/UX,
+              graphics, and cinematic video editing. I've worked with brands
+              like The Chartistt, Investist, AlmaBetter and multiple creators to deliver
+              scalable tech solutions and engaging digital content.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-link" onclick="opentab('skills')">
+              <button
+                class="tab-link active-link"
+                onclick="opentab('skills')"
+                data-tab="skills"
+              >
                 Skills
-              </p>
-              <p class="tab-links" onclick="opentab('education')">Education</p>
-              <p class="tab-links" onclick="opentab('experience')">
+              </button>
+              <button
+                class="tab-link"
+                onclick="opentab('education')"
+                data-tab="education"
+              >
+                Education
+              </button>
+              <button
+                class="tab-link"
+                onclick="opentab('experience')"
+                data-tab="experience"
+              >
                 Experience
-              </p>
+              </button>
             </div>
             <div class="tab-contents active-tab" id="skills">
-              <ul>
-                <li><span>Frontend</span><br />ReactJS, React Native</li>
-                <li>
-                  <span>Stack & Libraries</span><br />MERN, MEAN, PHP, Bootstrap
-                </li>
-                <li><span>Database</span><br />with MongoDB and MySQL</li>
-              </ul>
+              <div class="skills-grid">
+                <div class="skill-item">
+                  <h4>Frontend</h4>
+                  <p>React, React Native, Next.js, HTML, CSS</p>
+                </div>
+                <div class="skill-item">
+                  <h4>Backend</h4>
+                  <p>Node.js, Express.js, Python, Java</p>
+                </div>
+                <div class="skill-item">
+                  <h4>Database</h4>
+                  <p>MongoDB, MySQL</p>
+                </div>
+                <div class="skill-item">
+                  <h4>Tools & Cloud</h4>
+                  <p>AWS, Docker, Figma, Git, GitHub, Google Cloud</p>
+                </div>
+              </div>
             </div>
             <div class="tab-contents" id="education">
-              <ul>
+              <ul class="timeline">
                 <li>
-                  <span>2021</span><br />BCA from Bhabha Engineering Research
-                  Institute, Bhopal
+                  <span class="year">2021</span>
+                  <div class="timeline-content">
+                    <h4>BCA</h4>
+                    <p>Bhabha Engineering Research Institute, Bhopal</p>
+                  </div>
                 </li>
                 <li>
-                  <span>2017</span><br />Intermediate from SDSM School for
-                  Excellence, Jamshedpur
+                  <span class="year">2017</span>
+                  <div class="timeline-content">
+                    <h4>Intermediate</h4>
+                    <p>SDSM School for Excellence, Jamshedpur</p>
+                  </div>
                 </li>
                 <li>
-                  <span>2015</span><br />Mariculation from AIWC Academy of
-                  Excellence, Jamshedpur
+                  <span class="year">2015</span>
+                  <div class="timeline-content">
+                    <h4>Matriculation</h4>
+                    <p>AIWC Academy of Excellence, Jamshedpur</p>
+                  </div>
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
-              <ul>
+              <ul class="timeline">
+                
                 <li>
-                  <span>April, 2022 - December, 2022</span><br />Full Stack
-                  Developer Internship at Almabetter
+                  <span class="year">Jul 2024 - Present</span>
+                  <div class="timeline-content">
+                    <h4>SDE-II</h4>
+                    <p>Chartistt Education Pvt. Ltd.</p>
+                  </div>
                 </li>
                 <li>
-                  <span>Jan, 2023 - June, 2024</span><br />Web Development
-                  Consultant at Almabetter
+                  <span class="year">Jan 2023 - June 2024</span>
+                  <div class="timeline-content">
+                    <h4>Web Development Consultant</h4>
+                    <p>AlmaBetter</p>
+                  </div>
                 </li>
                 <li>
-                  <span>Jan, 2023 - June, 2024</span><br />SDE-II at Investist
+                  <span class="year">April 2022 - December 2022</span>
+                  <div class="timeline-content">
+                    <h4>Full Stack Developer Intern</h4>
+                    <p>AlmaBetter</p>
+                  </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- -----------------------------services------------------------- -->
-
-    <div id="services">
+    <!-- What I Do Section -->
+    <section id="services" class="section section-alt">
       <div class="container">
-        <h1 class="sub-title">Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web/App Development</h2>
+        <h2 class="section-title" data-aos="fade-up">What I Do</h2>
+        <div class="services-grid">
+          <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="service-icon">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Full-Stack Development</h3>
             <p>
-              Full Stack Web Developer with hands-on expertise in MERN, MEAN,
-              and PHP stacks, along with experience in Android and iOS app
-              development.
+              Building scalable web applications using MERN, MEAN, and PHP
+              stacks. Expertise in React, Node.js, Python, Java and cloud deployments on AWS.
             </p>
-            <a href="#contact">Learn more</a>
+            <a href="#portfolio" class="service-link"
+              >View Projects <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
-          <div>
-            <i class="fa-solid fa-pen-nib"></i>
-            <h2>Graphic Designing</h2>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <h3>App Development</h3>
             <p>
-              Graphic Designer with hands-on experience in Figma, Canva, and
-              Adobe Illustrator, creating visually compelling designs for web,
-              mobile, and print.
+              Creating cross-platform mobile applications for Android and iOS
+              using React Native. Building native experiences with modern
+              frameworks.
             </p>
-            <a href="#contact">Learn more</a>
+            <a href="#portfolio" class="service-link"
+              >View Projects <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
-          <div>
-            <i class="fa-solid fa-photo-film"></i>
-            <h2>Video Editing</h2>
+          <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <h3>AI Automation</h3>
             <p>
-              Skilled in all types of video editing, including YouTube videos,
-              video ads, reels, and shorts, using tools like CapCut, Adobe
-              Premiere Pro, and After Effects to deliver high-quality, engaging
-              content.
+              Building intelligent automation solutions using AI tools like OpenAI, 
+              Gemini, N8N, and Zapier. Creating workflows that streamline business 
+              processes and enhance productivity.
             </p>
-            <a href="#contact">Learn more</a>
+            <a href="#portfolio" class="service-link"
+              >View Projects <i class="fa-solid fa-arrow-right"></i
+            ></a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- -----------------------Portfolio------------------------ -->
-
-    <div id="portfolio">
+    <!-- Tech Stack Section -->
+    <section id="tech-stack" class="section">
       <div class="container">
-        <h1 class="sub-title">My Work</h1>
-        <div class="work-list">
-          <div class="work">
-            <img src="asset/images/work_1_update.jpg" alt="" />
-            <div class="layer">
-              <h3>Investist Website</h3>
-              <p>
-                Build your safest real estate portfolio now Be the part of
-                India's fastest growing fractional and well managed real estate
-                community and diverify your overall investment.
-              </p>
-              <a href="https://investist.in/"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+        <h2 class="section-title" data-aos="fade-up">Tech Stack</h2>
+        <div class="tech-grid">
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="0">
+            <i class="fa-brands fa-react" style="color: #61DAFB;"></i>
+            <span>React</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="50">
+            <i class="fa-brands fa-node-js" style="color: #339933;"></i>
+            <span>Node.js</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="100">
+            <i class="fa-brands fa-js" style="color: #F7DF1E;"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="150">
+            <i class="fa-brands fa-python" style="color: #3776AB;"></i>
+            <span>Python</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="200">
+            <i class="fa-brands fa-java" style="color: #ED8B00;"></i>
+            <span>Java</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="250">
+            <i class="fa-brands fa-angular" style="color: #DD0031;"></i>
+            <span>Angular</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fa-brands fa-react" style="color: #61DAFB;"></i>
+            <span>React Native</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="350">
+            <i class="fa-brands fa-aws" style="color: #FF9900;"></i>
+            <span>AWS</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fa-brands fa-google" style="color: #4285F4;"></i>
+            <span>Google Cloud</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="450">
+            <i class="fa-solid fa-fire" style="color: #FFA000;"></i>
+            <span>Firebase</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="500">
+            <i class="fa-brands fa-docker" style="color: #2496ED;"></i>
+            <span>Docker</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="550">
+            <i class="fa-solid fa-leaf" style="color: #47A248;"></i>
+            <span>MongoDB</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="600">
+            <i class="fa-solid fa-database" style="color: #4479A1;"></i>
+            <span>MySQL</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="650">
+            <i class="fa-brands fa-git-alt" style="color: #F05032;"></i>
+            <span>Git</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="700">
+            <i class="fa-brands fa-github" style="color: #ffffff;"></i>
+            <span>GitHub</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="750">
+            <i class="fa-brands fa-figma" style="color: #F24E1E;"></i>
+            <span>Figma</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="800">
+            <i class="fa-solid fa-robot" style="color: #10A37F;"></i>
+            <span>OpenAI</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="850">
+            <i class="fa-solid fa-brain" style="color: #4285F4;"></i>
+            <span>Gemini</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="900">
+            <i class="fa-solid fa-plug" style="color: #FF4A00;"></i>
+            <span>Zapier</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="950">
+            <i class="fa-solid fa-network-wired" style="color: #FF6D5A;"></i>
+            <span>N8N</span>
+          </div>
+          <div class="tech-item" data-aos="zoom-in" data-aos-delay="1000">
+            <i class="fa-solid fa-wand-magic-sparkles" style="color: #9333EA;"></i>
+            <span>AI Tools</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio / Case Studies Section -->
+    <section id="portfolio" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Case Studies & Major Projects</h2>
+        <div class="work-grid">
+          <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/malwa.jpg"
+                alt="Video Editing Portfolio"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>History of Malwa</h3>
+                  <p>
+                    History of Malwa is a Journal Publishing Website. Built with Next.js and MongoDB.
+                  </p>
+                  <div class="work-tags">
+                    <span>Next.js</span>
+                    <span>MongoDB</span>
+                    <span>Express.js</span>
+                  </div>
+                  <a
+                    href="https://historyofmalwa.org/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="work">
-            <img src="asset/images/work_2_update.jpg" alt="" />
-            <div class="layer">
-              <h3>Android App</h3>
-              <p>
-                This app helps you to stay informed, stay ahead, your
-                personalized guide to education and career success.
-              </p>
-              <a href="https://play.google.com/store/apps/details?id=com.companion_app"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/chavi.jpg"
+                alt="Video Editing Portfolio"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>Chavi Portfolio</h3>
+                  <p>
+                    Chavi Panday is famous realtor in UAE and Saudi Arabia and this is a portfolio website of her. Built with React.js and deployed on Google Cloud.
+                  </p>
+                  <div class="work-tags">
+                    <span>React.js</span>
+                    <span>Node.js</span>
+                    <span>Google Cloud Console</span>
+                  </div>
+                  <a
+                    href="https://www.investwithchavi.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="work">
-            <img src="asset/images/work_3_update.jpg" alt="" />
-            <div class="layer">
-              <h3>Video and Reels Editing</h3>
-              <p>This is one of the reel edited by me for my regular client.</p>
-              <a
-                href="https://www.instagram.com/reel/C_YHDv-i7qa/?igsh=d3lrazBwdjZhdjNk"
-                ><i class="fa-solid fa-arrow-up-right-from-square"></i
-              ></a>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/futech.jpg"
+                alt="Video Editing Portfolio"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>Global Futech Website</h3>
+                  <p>
+                    This is Global Futech Website for a event in Dubai. Built with Angular and deployed on Node.js.
+                  </p>
+                  <div class="work-tags">
+                    <span>Angular</span>
+                    <span>MongoDB</span>
+                    <span>Google Cloud</span>
+                  </div>
+                  <a
+                    href="https://www.globalfutechsummit.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/bugi.jpg"
+                alt="Video Editing Portfolio"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>Infina First Wellness</h3>
+                  <p>
+                    Infina First Wellnes landing page is build for BUGI program. Built with Tagmango's website builder.
+                  </p>
+                  <div class="work-tags">
+                    <span>Tagmango</span>
+                  </div>
+                  <a
+                    href="https://infinafirstwellness.com/main"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/durrani.jpg"
+                alt="Video Editing Portfolio"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>Durrani Website</h3>
+                  <p>
+                    This is a Real-estate website based in Dubai and Saudi Arabia. Built with Wordpress.
+                  </p>
+                  <div class="work-tags">
+                    <span>Wordpress</span>
+                  </div>
+                  <a
+                    href="https://durraniestates.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/work_1_update.jpg"
+                alt="Investist Website"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>Investist Website</h3>
+                  <p>
+                    Built end-to-end real estate investment platform. Built with MERN stack and deployed on AWS.
+                  </p>
+                  <div class="work-tags">
+                    <span>React</span>
+                    <span>Node.js</span>
+                    <span>AWS</span>
+                    <span>MongoDB</span>
+                  </div>
+                  <a
+                    href="https://investist.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/work_2_update.jpg"
+                alt="Companion App"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>Companion App</h3>
+                  <p>
+                    Education and career news platform. Cross-platform mobile app built with React Native.
+                  </p>
+                  <div class="work-tags">
+                    <span>React Native</span>
+                    <span>Firebase</span>
+                    <span>iOS</span>
+                    <span>Android</span>
+                  </div>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.companion_app"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/chartistt.jpg"
+                alt="Video Editing Portfolio"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>Chartistt Website</h3>
+                  <p>
+                    Chartistt is a platform for education of financial markets. Built with Next.js and deployed on AWS.
+                  </p>
+                  <div class="work-tags">
+                    <span>Next.js</span>
+                    <span>MongoDB</span>
+                    <span>AWS</span>
+                  </div>
+                  <a
+                    href="https://www.thechartistt.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="work-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="work-image-wrapper">
+              <img
+                src="asset/images/deepak.jpg"
+                alt="Video Editing Portfolio"
+                class="work-image"
+              />
+              <div class="work-overlay">
+                <div class="work-content">
+                  <h3>AutomateUP Website</h3>
+                  <p>
+                    AutomateUp is a automation domain or our we are still woring on this. Built with AI tools.
+                  </p>
+                  <div class="work-tags">
+                    <span>ChatGPT</span>
+                    <span>Loveable</span>
+                    <span>Bolt</span>
+                  </div>
+                  <a
+                    href="https://preeminent-salamander-9888a5.netlify.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="work-link"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <!-- <a href="https://github.com/Tapashkumar99" class="btn">See more</a> -->
       </div>
-    </div>
+    </section>
 
-    <!-- -----------------------------------Contact Info----------------------------------- -->
-
-    <div id="contact">
+    <!-- Achievements Section -->
+    <section id="achievements" class="section">
       <div class="container">
-        <div class="row">
-          <div class="contact-left">
-            <div class="sub-title">Contact Me</div>
-            <p><i class="fa-solid fa-envelope"></i> tapashkumar118@gmail.com</p>
-            <p><i class="fa-solid fa-phone"></i> 8825208727</p>
+        <h2 class="section-title" data-aos="fade-up">Achievements & Stats</h2>
+        <div class="achievements-grid">
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="0">
+            <div class="achievement-number">50+</div>
+            <div class="achievement-label">Projects Delivered</div>
+          </div>
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="100">
+            <div class="achievement-number">5+</div>
+            <div class="achievement-label">Years Experience</div>
+          </div>
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="200">
+            <div class="achievement-number">10+</div>
+            <div class="achievement-label">Happy Clients</div>
+          </div>
+          <div class="achievement-card" data-aos="zoom-in" data-aos-delay="300">
+            <div class="achievement-number">2</div>
+            <div class="achievement-label">Startups in Journey</div>
+          </div>
+        </div>
+        <div class="clients-section">
+          <h3 class="clients-title">Worked With</h3>
+          <div class="clients-list">
+            <div class="client-item">The Chartistt</div>
+            <div class="client-item">Investist</div>
+            <div class="client-item">AlmaBetter</div>
+            <div class="client-item">The Automation Guy</div>
+            <div class="client-item">Multiple Creators</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Get In Touch</h2>
+        <div class="contact-wrapper">
+          <div class="contact-left" data-aos="fade-right">
+            <h3>Let's Connect</h3>
+            <p>
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your vision.
+            </p>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <a href="mailto:tapashkumar118@gmail.com"
+                    >tapashkumar118@gmail.com</a
+                  >
+                </div>
+              </div>
+              <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <a href="tel:+918825208727">+91 8825208727</a>
+                </div>
+              </div>
+            </div>
             <div class="social-icons">
-              <a href="https://www.instagram.com/_wildwanderer__/"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
+              <a
+                href="https://www.instagram.com/_wildwanderer__/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Instagram"
+              >
+                <i class="fa-brands fa-instagram"></i>
+              </a>
               <a
                 href="https://wa.me/918825208727/?text=I'm%20interested%20in%20your%20portfolio"
-                ><i class="fa-brands fa-whatsapp"></i
-              ></a>
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="WhatsApp"
+              >
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
               <a
                 href="https://www.linkedin.com/in/tapash-kumar-mahato-875148238"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-              <a href="https://github.com/Tapashkumar99"
-                ><i class="fa-brands fa-github"></i
-              ></a>
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a
+                href="https://github.com/Tapashkumar99"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
             </div>
-            <!-- <a href="asset/Tapash Kumar.pdf" download class="btn btn2"
-              >Download CV</a
-            > -->
+            <a
+              href="asset/Tapash_Resume.pdf"
+              download
+              class="btn btn-primary download-cv"
+            >
+              <i class="fa-solid fa-download"></i> Download Resume
+            </a>
           </div>
-          <div class="contact-right">
-            <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your Name" required />
-              <input
-                type="email"
-                name="Email"
-                placeholder="example@email.com"
-                required
-              />
-              <textarea
-                name="Message"
-                rows="6"
-                placeholder="Your Message"
-              ></textarea>
-              <button type="submit" class="btn btn2">Submit</button>
+          <div class="contact-right" data-aos="fade-left">
+            <form name="submit-to-google-sheet" class="contact-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="Name"
+                  placeholder="Your Name"
+                  required
+                  class="form-input"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="Email"
+                  placeholder="your.email@example.com"
+                  required
+                  class="form-input"
+                />
+              </div>
+              <div class="form-group">
+                <textarea
+                  name="Message"
+                  rows="6"
+                  placeholder="Your Message"
+                  required
+                  class="form-textarea"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit">
+                <span class="btn-text">Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
             </form>
-            <span id="msg"></span>
+            <div id="msg" class="form-message"></div>
           </div>
         </div>
       </div>
-      <div class="copyright">
-        <p>
-          Copyright © Tapash. Made with <i class="fa-solid fa-heart"></i> by
-          Tapash
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="copyright">
+          Copyright © 2025 Tapash Kumar Mahato. Made with
+          <i class="fa-solid fa-heart"></i> by Tapash
         </p>
       </div>
-    </div>
+    </footer>
 
     <script src="index.js"></script>
   </body>
